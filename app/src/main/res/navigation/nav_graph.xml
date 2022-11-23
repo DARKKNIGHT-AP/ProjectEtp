@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment3">
+    <fragment
+        android:id="@+id/homeFragment3"
+        android:name="com.example.projectetp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment3_to_detailFragment2"
+            app:destination="@id/detailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment2"
+        android:name="com.example.projectetp.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment2_to_homeFragment3"
+            app:destination="@id/homeFragment3"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="wallpaperImage"
+            app:argType="string"
+            android:defaultValue="null" />
+    </fragment>
+</navigation>
